@@ -1,4 +1,4 @@
-# ROS2 package for EM2RS Series stepper motor drivers
+# ROS2 package for CL86RS Series stepper motor drivers
 
 [![License](./apache20.svg)](./LICENSE.txt)
 
@@ -13,6 +13,9 @@ It is expected to support the following products:
 - STEPPERONLINE
   - DM556RS
   - DM882RS
+  - CL86RS      (THIS NEEDS TO BE PORTED)
+
+# The [CL86RS](https://www.omc-stepperonline.com/modbus-rs485-closed-loop-stepper-motor-driver-2-1-8-0a-30-110vdc-or-18-80vac-cl86rs) Uses Encoders, and needs to be implentated
 
 ## Ready for ros2\_control
 
