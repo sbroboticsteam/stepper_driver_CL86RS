@@ -9,48 +9,18 @@ holding_registers:
       min: 200
       max: 51200
       default: 10000
-  - addr: 0x0003
-    name: ctrl_mode
-    alt_names:
-      - Pr0.01
-      - Control Mode
-      - Microstep
-    value:
-      min: 0
-      max: 255
-      default: 2
   - addr: 0x0007
     name: dir
     alt_names:
       - Pr0.03
       - Motor direction
-    comment: "0: Open Loop, 2: Closed Loop, 1: Reserved"
+    comment: "0: CW, 1: CCW"
     value:
-      open_loop: 0
-      closed_loop: 2
+      cw: 0
+      ccw: 1
       min: 0
-      max: 255
-      default: 2
-  - addr: 0x0009
-    name: motor_induct
-    alt_names:
-      - Pr0.04
-      - Motor Inductance
-    comment: "Units in 0.001mH"
-    value:
-      min: 0
-      max: 10000
-      default: 1499
-  - addr: 0x000B
-    name: max_pos_error
-    alt_names:
-      - Pr0.05
-      - Allowed max position following error
-    comment: "Used to set the allowed max pulse count of position errors (in CPR)"
-    value:
-      min: 0
-      max: 65535
-      default: 4000
+      max: 1
+      default: 0
   - addr: 0x000F
     name: force_enable
     alt_names:
@@ -68,56 +38,6 @@ holding_registers:
       min: 0
       max: 1
       default: 0
-
-
-  - addr: 0x0051
-    name: pos_loop_Kp
-    alt_names:
-      - Pr1.00
-      - Position loop Kp
-    comment: >
-      Increase this value will reduce position
-      following error, but could result in motor
-      vibration
-    value:
-      min: 0
-      max: 3000
-      default: 507 #datasheet says 507:25 and 1008:45?
-
-  - addr: 0x0053
-    name: vel_loop_Ki
-    alt_names:
-      - Pr1.01
-      - Velocity loop Ki
-    comment: >
-      This parameter is used for tuning Velocity
-      loop proportional gain.
-    value:
-      min: 0
-      max: 3000
-      default: 3
-
-
-      
-  - addr: 0x0051
-    name: vel_loop_Kp
-    alt_names:
-      - Pr1.02
-      - Velocity loop Kp
-    comment: >
-      Increase the value can increase velocity
-      stiffness
-      
-    value:
-      min: 0
-      max: 3000
-      default: 507 #datasheet says 507:25 and 1008:45?
-
-#ignoring Pr1.10
-
-
-
-
   - addr: 0x00A1
     name: cmd_filter_time
     alt_names:
