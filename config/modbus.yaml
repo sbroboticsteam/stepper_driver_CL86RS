@@ -51,7 +51,7 @@ holding_registers:
       min: 0
       max: 65535
       default: 4000
-  - addr: 0x000F
+  - addr: 0x00F
     name: force_enable
     alt_names:
       - Pr0.07
@@ -99,7 +99,7 @@ holding_registers:
 
 
       
-  - addr: 0x0051
+  - addr: 0x0055
     name: vel_loop_Kp
     alt_names:
       - Pr1.02
