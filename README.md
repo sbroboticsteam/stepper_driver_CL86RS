@@ -1,0 +1,1 @@
+command: ros2 run em2rs_driver em2rs_driver_standalone --ros-args   -p stepper_prefix:=/stepper/motor1   -p stepper_driver_model:=DM882RS   -p modbus_is_remote:=false   -p modbus_prefix:=/modbus/bus1   -p modbus_leaf_id:=1   -p serial_is_remote:=false   -p serial_prefix:=/serial/com1   -p serial_dev_name:=/dev/ttyUSB0   -p serial_baud_rate:=115200   
